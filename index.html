@@ -228,7 +228,7 @@
       return encode((await enc()).e(str));
     }
     async function decodeStr(str) {
-      return (await enc()).d(decode(str));
+      return decoder.decode((await enc()).d(decode(str)));
     }
     async function fx() {
       var e = await encodeStr(getText())
