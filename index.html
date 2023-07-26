@@ -225,7 +225,7 @@
       document.body.removeChild(t);
     }
     async function encodeStr(str) {
-      return encode((await enc()).e(str));
+      return encode((await enc()).e(encoder.encode(str)));
     }
     async function decodeStr(str) {
       return decoder.decode((await enc()).d(decode(str)));
